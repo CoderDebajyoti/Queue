@@ -53,7 +53,7 @@ int main()
 			case 3:
 				//display
 				printf("The elements of General Queue (is/are) : ");
-				for(i=0;i<=rear;i++)
+				for(i=front;i<=rear;i++)
 				{
 					printf("\n%d",gqueue[i]);
 				}
