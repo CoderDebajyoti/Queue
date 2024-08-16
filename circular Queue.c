@@ -52,26 +52,26 @@ int main()
 				else
 				{
 					item=cqueue[front];
+					printf("The item is %d\n",item);
 					if(front==rear)
 					{
-						rear=0 ,front=0;
-					}
+						rear=-1 ,front=-1;
+					}	
 					else
 					{
-						front=front+1;
-						printf("The item is %d\n",item);
+						front=(front+1)%maxsize;
+						
 					}
 					
 				}
 				break;
 			case 3:
 				//display
-				printf("The elements of General Queue (is/are) : ");
-				for(i=0;i<=rear;i++)
-				{
-					printf("\n%d",cqueue[i]);
-				}
-				printf("\n\n");
+				for(i=front;i!=rear;i=(i+1)%maxsize)
+					{
+						print("%d",cqueue[i]);
+					}
+					print("%d",cqueue[i]);
 				break;
 			case 4:
 				exit(0);	
